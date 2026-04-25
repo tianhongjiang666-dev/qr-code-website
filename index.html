@@ -1,22 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>二维码生成器</title>
-</head>
-<body>
-  <h2>输入网址生成二维码</h2>
-  <input type="text" id="url" placeholder="输入网址">
-  <button onclick="generateQR()">生成二维码</button>
-  <br><br>
-  <img id="qr">
-
-  <script>
-    function generateQR() {
-      var url = document.getElementById("url").value;
-      document.getElementById("qr").src =
-        "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(url);
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "PingFang SC", sans-serif;
     }
-  </script>
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .tip {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>📱 加我微信</h2>
+    <p>扫一扫二维码，添加好友</p>
+
+    <img src="wechat.jpg" alt="微信二维码">
+
+    <div class="tip">长按识别二维码</div>
+  </div>
 </body>
 </html>
